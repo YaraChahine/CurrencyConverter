@@ -3,7 +3,9 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,4 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void convert(View view){
+        String lbp_input= lbp.getText().toString();
+        String usd_input= usd.getText().toString();
+
+        if (lbp_input.isEmpty() && usd_input.isEmpty() ){
+            Toast.makeText(getApplicationContext(),"Please enter an amount", Toast.LENGTH_LONG).show();
+        }
+
+
+    }
 }
